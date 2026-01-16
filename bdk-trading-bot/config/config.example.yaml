@@ -1,0 +1,68 @@
+general:
+  environment: development
+  debug: true
+  timezone: Europe/Istanbul
+
+paper_trading:
+  enabled: true
+  initial_balance_usd: 10000
+  max_single_trade_usd: 500
+  max_daily_loss_usd: 300
+  max_open_positions: 5
+
+crypto:
+  enabled: true
+  exchanges: [binance, bybit, okx, kucoin, gateio]
+  coins: [BTC, ETH, SOL, XRP, ADA, AVAX, DOGE, DOT, MATIC, LINK, UNI, LTC, ATOM, NEAR, APT]
+  quote_currency: USDT
+
+us_stocks:
+  enabled: true
+  provider: alpaca
+  stocks: [AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA, META, AMD, NFLX, CRM]
+  etfs: [SPY, QQQ, IWM, DIA, VTI]
+
+bist:
+  enabled: true
+  symbols: [THYAO, SISE, ASELS, GARAN, AKBNK, KCHOL, TUPRS, EREGL, BIMAS, FROTO]
+
+arbitrage:
+  enabled: true
+  min_profit_percent: 0.15
+  max_execution_time_seconds: 60
+  min_confidence_score: 90
+
+news_trading:
+  enabled: true
+  min_sentiment_score: 75
+  sources: [newsapi, cryptopanic, finnhub, reddit]
+
+risk_management:
+  stop_loss_percent: 2.0
+  take_profit_percent: 5.0
+  trailing_stop_enabled: true
+  trailing_stop_percent: 1.5
+
+telegram:
+  enabled: true
+  language: tr
+  daily_report_time: "08:00"
+  night_mode:
+    enabled: true
+    start_time: "23:00"
+    end_time: "07:00"
+    auto_trade: true
+    wake_up_threshold_usd: 1000
+
+database:
+  type: postgresql
+  pool_size: 10
+
+redis:
+  enabled: true
+  cache_ttl_seconds: 60
+
+logging:
+  level: INFO
+  format: json
+  file_enabled: true
