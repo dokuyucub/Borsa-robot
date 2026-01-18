@@ -29,6 +29,8 @@ from .base import BaseExchange
 # Exchange implementations
 from .binance import BinanceExchange
 from .bybit import BybitExchange
+from .gateio import GateIOExchange
+from .kucoin import KuCoinExchange
 from .okx import OKXExchange
 
 # Factory
@@ -65,6 +67,8 @@ __all__ = [
     # Exchange implementations
     "BinanceExchange",
     "BybitExchange",
+    "GateIOExchange",
+    "KuCoinExchange",
     "OKXExchange",
     # Factory
     "ExchangeFactory",
