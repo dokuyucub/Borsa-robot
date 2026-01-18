@@ -26,6 +26,9 @@ from .models import (
 # Base exchange
 from .base import BaseExchange
 
+# Exchange implementations
+from .binance import BinanceExchange
+
 # Factory
 from .factory import (
     ExchangeFactory,
@@ -57,6 +60,8 @@ __all__ = [
     "Trade",
     # Base exchange
     "BaseExchange",
+    # Exchange implementations
+    "BinanceExchange",
     # Factory
     "ExchangeFactory",
     "close_all_exchanges",
